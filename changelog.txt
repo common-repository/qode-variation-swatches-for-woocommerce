@@ -1,0 +1,24 @@
+*** QODE Variation Swatches for WooCommerce Changelog ***
+
+2024-10-24 - version 1.0.5
+* Improved WordPress coding standards
+* Minor fixes
+
+2024-10-14 - version 1.0.4
+* Improved framework
+* Minor fixes
+
+2024-07-16 - version 1.0.3
+* Improved helper functions
+* Minor fixes
+
+2024-07-04 - version 1.0.2
+* Improved framework
+* Fixed minor bugs
+
+2024-06-26 - version 1.0.1
+* Improved Taxonomy and Product Attribute framework pages template and style
+* Fixed minor bugs
+
+2024-06-25 - version 1.0
+* Initial release.

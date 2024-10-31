@@ -1,0 +1,654 @@
+/* ==========================================================================
+   Include variables and mixins
+   ========================================================================== */
+/* ==========================================================================
+   Typography variables
+   ========================================================================== */
+/* ==========================================================================
+   Box variables
+   ========================================================================== */
+/* ==========================================================================
+   Devices screen size variables
+   ========================================================================== */
+/* ==========================================================================
+   Various color variables
+   ========================================================================== */
+/* ==========================================================================
+   Typography mixins
+   ========================================================================== */
+/* ==========================================================================
+   Typography mixins - end
+   ========================================================================== */
+/* ==========================================================================
+   Layout mixins - begin
+   ========================================================================== */
+/* ==========================================================================
+   Layout mixins - end
+   ========================================================================== */
+/* ==========================================================================
+   Grid size mixins - begin
+   ========================================================================== */
+/* ==========================================================================
+   Grid size mixins - end
+   ========================================================================== */
+/* ==========================================================================
+   Helper mixins - begin
+   ========================================================================== */
+/* ==========================================================================
+   Helper mixins - end
+   ========================================================================== */
+/* ==========================================================================
+   Animation mixins - start
+   ========================================================================== */
+/* ==========================================================================
+   Animation mixins - end
+   ========================================================================== */
+/* ==========================================================================
+   Keyframes settings
+   ========================================================================== */
+
+@keyframes qode-rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes qode-fade-in {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes qode-fade-out {
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes qode-ball-fall {
+	0% {
+		opacity: 0;
+		transform: translateY(-145%);
+	}
+	10% {
+		opacity: .5;
+	}
+	20% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	80% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	90% {
+		opacity: .5;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(145%);
+	}
+}
+
+@keyframes qode-scaleout {
+	0% {
+		-webkit-transform: scale(0);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 0;
+	}
+}
+
+@keyframes qode-double-pulse {
+	0%, 100% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+}
+
+@keyframes qode-cube {
+	0% {
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+	}
+	50% {
+		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+	}
+	100% {
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+	}
+}
+
+@keyframes qode-rotating-cubes {
+	25% {
+		transform: translateX(42px) rotate(-90deg) scale(0.5);
+	}
+	50% {
+		transform: translateX(42px) translateY(42px) rotate(-179deg);
+	}
+	50.1% {
+		transform: translateX(42px) translateY(42px) rotate(-180deg);
+	}
+	75% {
+		transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes qode-stretch-delay {
+	0%, 40%, 100% {
+		transform: scaleY(0.4);
+	}
+	20% {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes qode-bounce-delay {
+	0%, 80%, 100% {
+		transform: scale(0);
+	}
+	40% {
+		transform: scale(1);
+	}
+}
+
+@keyframes qode-rotate-circles {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes qode-atom-position {
+	50% {
+		top: 80px;
+		left: 80px;
+	}
+}
+
+@keyframes qode-atom-size {
+	50% {
+		transform: scale(0.5);
+	}
+}
+
+@keyframes qode-atom-zindex {
+	100% {
+		z-index: 10;
+	}
+}
+
+@keyframes qode-atom-shrink {
+	50% {
+		transform: scale(0.8);
+	}
+}
+
+@keyframes qode-clock {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes qode-clock-1 {
+	0% {
+		transform: rotate(-135deg);
+	}
+	30% {
+		transform: rotate(-450deg);
+	}
+	100% {
+		transform: rotate(-450deg);
+	}
+}
+
+@keyframes qode-clock-2 {
+	5% {
+		transform: rotate(-90deg);
+	}
+	35% {
+		transform: rotate(-405deg);
+	}
+	100% {
+		transform: rotate(-405deg);
+	}
+}
+
+@keyframes qode-clock-3 {
+	10% {
+		transform: rotate(-45deg);
+	}
+	40% {
+		transform: rotate(-360deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes qode-clock-4 {
+	15% {
+		transform: rotate(0deg);
+	}
+	45% {
+		transform: rotate(-315deg);
+	}
+	100% {
+		transform: rotate(-315deg);
+	}
+}
+
+@keyframes qode-mitosis-invert {
+	100% {
+		transform: rotate(180deg);
+	}
+}
+
+@keyframes qode-mitosis-ball-1 {
+	12% {
+		transform: none;
+	}
+	26% {
+		transform: translateX(25%) scale(1, 0.8);
+	}
+	40% {
+		transform: translateX(50%) scale(0.8, 0.8);
+	}
+	60% {
+		transform: translateX(50%) scale(0.8, 0.8);
+	}
+	74% {
+		transform: translate(50%, 25%) scale(0.6, 0.8);
+	}
+	88% {
+		transform: translate(50%, 50%) scale(0.6, 0.6);
+	}
+	100% {
+		transform: translate(50%, 50%) scale(0.6, 0.6);
+	}
+}
+
+@keyframes qode-mitosis-ball-2 {
+	12% {
+		transform: none;
+	}
+	26% {
+		transform: translateX(25%) scale(1, 0.8);
+	}
+	40% {
+		transform: translateX(50%) scale(0.8, 0.8);
+	}
+	60% {
+		transform: translateX(50%) scale(0.8, 0.8);
+	}
+	74% {
+		transform: translate(50%, -25%) scale(0.6, 0.8);
+	}
+	88% {
+		transform: translate(50%, -50%) scale(0.6, 0.6);
+	}
+	100% {
+		transform: translate(50%, -50%) scale(0.6, 0.6);
+	}
+}
+
+@keyframes qode-mitosis-ball-3 {
+	12% {
+		transform: none;
+	}
+	26% {
+		transform: translateX(-25%) scale(1, 0.8);
+	}
+	40% {
+		transform: translateX(-50%) scale(0.8, 0.8);
+	}
+	60% {
+		transform: translateX(-50%) scale(0.8, 0.8);
+	}
+	74% {
+		transform: translate(-50%, 25%) scale(0.6, 0.8);
+	}
+	88% {
+		transform: translate(-50%, 50%) scale(0.6, 0.6);
+	}
+	100% {
+		transform: translate(-50%, 50%) scale(0.6, 0.6);
+	}
+}
+
+@keyframes qode-mitosis-ball-4 {
+	12% {
+		transform: none;
+	}
+	26% {
+		transform: translateX(-25%) scale(1, 0.8);
+	}
+	40% {
+		transform: translateX(-50%) scale(0.8, 0.8);
+	}
+	60% {
+		transform: translateX(-50%) scale(0.8, 0.8);
+	}
+	74% {
+		transform: translate(-50%, -25%) scale(0.6, 0.8);
+	}
+	88% {
+		transform: translate(-50%, -50%) scale(0.6, 0.6);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(0.6, 0.6);
+	}
+}
+
+@keyframes qode-lines-spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes qode-fussion-ball-1 {
+	50% {
+		top: -100%;
+		left: 200%;
+	}
+	100% {
+		top: 50%;
+		left: 100%;
+		z-index: 2;
+	}
+}
+
+@keyframes qode-fussion-ball-2 {
+	50% {
+		top: 200%;
+		left: 200%;
+	}
+	100% {
+		top: 100%;
+		left: 50%;
+		z-index: 1;
+	}
+}
+
+@keyframes qode-fussion-ball-3 {
+	50% {
+		top: 200%;
+		left: -100%;
+	}
+	100% {
+		top: 50%;
+		left: 0;
+		z-index: 2;
+	}
+}
+
+@keyframes qode-fussion-ball-4 {
+	50% {
+		top: -100%;
+		left: -100%;
+	}
+	100% {
+		top: 0;
+		left: 50%;
+		z-index: 1;
+	}
+}
+
+@keyframes qode-wave-jump-1 {
+	12% {
+		transform: translate(20px, -40px);
+		animation-timing-function: ease-in;
+	}
+	24%, 100% {
+		transform: translate(40px, 0);
+	}
+}
+
+@keyframes qode-wave-jump-2 {
+	12% {
+		transform: translate(0, 0);
+	}
+	24% {
+		transform: translate(20px, -40px);
+		animation-timing-function: ease-in;
+	}
+	36%, 100% {
+		transform: translate(40px, 0);
+	}
+}
+
+@keyframes qode-wave-jump-3 {
+	24% {
+		transform: translate(0, 0);
+	}
+	36% {
+		transform: translate(20px, -40px);
+		animation-timing-function: ease-in;
+	}
+	48%, 100% {
+		transform: translate(40px, 0);
+	}
+}
+
+@keyframes qode-wave-wipe {
+	48%, 100% {
+		transform: translateX(-120px);
+	}
+}
+
+@keyframes qode-pulse-circles-pulse {
+	0% {
+		transform: scale(0.1);
+		opacity: 1;
+		border-width: 50px;
+	}
+	100% {
+		transform: scale(1, 1);
+		opacity: 0;
+		border-width: 0;
+	}
+}
+
+@keyframes qode-bounce {
+	from,
+	20%,
+	53%,
+	80%,
+	to {
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		transform: translate3d(0, 0, 0);
+	}
+	40%,
+	43% {
+		animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		transform: translate3d(0, -30px, 0);
+	}
+	70% {
+		animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		transform: translate3d(0, -15px, 0);
+	}
+	90% {
+		transform: translate3d(0, -4px, 0);
+	}
+}
+
+@keyframes qode-pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes qode-close {
+	from {
+		clip-path: inset(-1px 0 -1px 0);
+	}
+	50% {
+		clip-path: inset(-1px 19px -1px 0);
+	}
+	51% {
+		clip-path: inset(-1px 0px -1px 19px);
+	}
+	to {
+		clip-path: inset(-1px 0 -1px 0);
+	}
+}
+
+@keyframes s3 {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+/* ==========================================================================
+   Global styles - begin
+   ========================================================================== */
+*[class*="qvsfw-"] {
+	box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Variation Swatches global styles
+   ========================================================================== */
+.variations_form .qvsfw-select-option,
+.woocommerce-product-attributes .qvsfw-select-option {
+	display: block;
+	position: relative;
+}
+
+.variations_form .qvsfw-select-option.qvsfw-disable-select,
+.woocommerce-product-attributes .qvsfw-select-option.qvsfw-disable-select {
+	display: none;
+}
+
+.variations_form .qvsfw-select-option .qvsfw-select-option-inner-holder,
+.woocommerce-product-attributes .qvsfw-select-option .qvsfw-select-option-inner-holder {
+	display: block;
+	position: relative;
+}
+
+.variations_form .qvsfw-select-option .qvsfw-select-option-inner,
+.woocommerce-product-attributes .qvsfw-select-option .qvsfw-select-option-inner {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	padding: 2px;
+	text-align: center;
+	border: 1px solid var(--qvsfw-variation-common-border-color, #e1e1e1);
+	border-radius: 0;
+}
+
+.variations_form .qvsfw-select-option.qvsfw-selected .qvsfw-select-option-inner,
+.woocommerce-product-attributes .qvsfw-select-option.qvsfw-selected .qvsfw-select-option-inner {
+	border-color: var(--qvsfw-variation-common-selected-border-color, #000000);
+}
+
+.variations_form .qvsfw-select-option .qvsfw-select-value,
+.woocommerce-product-attributes .qvsfw-select-option .qvsfw-select-value {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	border-radius: 0;
+	cursor: pointer;
+}
+
+.variations_form .qvsfw-select-option.qvsfw-select-option--color .qvsfw-select-value,
+.woocommerce-product-attributes .qvsfw-select-option.qvsfw-select-option--color .qvsfw-select-value {
+	width: var(--qvsfw-variation-color-option-min-width, 25px);
+	height: var(--qvsfw-variation-color-option-height, 25px);
+}
+
+.variations_form .qvsfw-select-option.qvsfw-select-option--label .qvsfw-select-value,
+.woocommerce-product-attributes .qvsfw-select-option.qvsfw-select-option--label .qvsfw-select-value {
+	min-width: var(--qvsfw-variation-label-option-min-width, 30px);
+	height: var(--qvsfw-variation-label-option-height, 30px);
+}
+
+.variations_form .qvsfw-select-option.qvsfw-select-option--image .qvsfw-select-value,
+.woocommerce-product-attributes .qvsfw-select-option.qvsfw-select-option--image .qvsfw-select-value {
+	width: auto;
+	height: auto;
+	flex-shrink: 0;
+}
+
+.variations_form .qvsfw-select-option.qvsfw-select-option--image .qvsfw-select-value img,
+.woocommerce-product-attributes .qvsfw-select-option.qvsfw-select-option--image .qvsfw-select-value img {
+	width: var(--qvsfw-variation-image-option-min-width, auto);
+	max-width: var(--qvsfw-variation-image-option-min-width, 65px);
+	height: var(--qvsfw-variation-image-option-height, auto);
+	object-fit: cover;
+}
+
+.variations_form .qvsfw-select-option--label .qvsfw-select-option-inner,
+.woocommerce-product-attributes .qvsfw-select-option--label .qvsfw-select-option-inner {
+	padding: 0;
+	text-align: center;
+	border-color: var(--qvsfw-variation-label-option-border-color, #e1e1e1);
+}
+
+.variations_form .qvsfw-select-option--label .qvsfw-select-value,
+.woocommerce-product-attributes .qvsfw-select-option--label .qvsfw-select-value {
+	width: auto;
+	height: auto;
+	min-width: var(--qvsfw-variation-label-option-min-width, 30px);
+}
+
+body:not([class*="qode-variation-swatches-for-woocommerce-premium"]) .variations_form .qvsfw-select-option--label .qvsfw-select-value, body:not([class*="qode-variation-swatches-for-woocommerce-premium"])
+.woocommerce-product-attributes .qvsfw-select-option--label .qvsfw-select-value {
+	padding: 0 4px;
+}
+
+.variations_form .qvsfw-select-options-container {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: var(--qvsfw-variation-space-between-options, 10px);
+}
+
+.variations_form .qvsfw-select-options-container.qvsfw-disabled-attribute--crossed-out .qvsfw-select-option.qvsfw-disable-select .qvsfw-select-option-inner:after, .variations_form .qvsfw-select-options-container.qvsfw-disabled-attribute--crossed-out .qvsfw-select-option.qvsfw-disable-out-of-stock .qvsfw-select-option-inner:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom right, transparent calc(50% - 1px), #e1e1e1, transparent calc(50% + 1px));
+	z-index: 1;
+}
+
+.variations_form select.qvsfw-attribute-type--image, .variations_form select.qvsfw-attribute-type--color, .variations_form select.qvsfw-attribute-type--label, .variations_form select.qvsfw-attribute-type--radio-button, .variations_form select.qvsfw-attribute-type--tab-switch {
+	display: none;
+}
+
+.variations_form select.qvsfw-attribute-type--image + .select2-container--default, .variations_form select.qvsfw-attribute-type--color + .select2-container--default, .variations_form select.qvsfw-attribute-type--label + .select2-container--default, .variations_form select.qvsfw-attribute-type--radio-button + .select2-container--default, .variations_form select.qvsfw-attribute-type--tab-switch + .select2-container--default {
+	display: none;
+}
+
+/* ==========================================================================
+   Variation Swatches responsive styles
+   ========================================================================== */
